@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АЙСИКО - КАТАЛОГ</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
+
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- font awesome icons script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
+    </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+            <a href="./index.html">АЙСИКО</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link">О нас</a>
+            <a href="./products.html" class="link active">Каталог</a>
+            <a href="./delivery.html" class="link">Доставка</a>
+            <a href="./dine-in.html" class="link">Адреса</a>
+            <a href="./catering.html" class="link">Бронирование</a>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Ваша корзина</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">₽0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <div class="empty-cart-img-div">
+                <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+            </div>
+            <p class="empty-cart-text">Ваша корзина пуста!</p>
+            <p class="empty-cart-info">Как рожок без мороженого!🍦 </p>
+            <p class="empty-cart-info">Наполните его нашими вкуснейшими добавками!</p>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <section class="products" id="products" style="margin-top: 100px;">
+        <h1>⠀Наша <span>Продукция⠀</span></h1>
+        <div class="categories-wrapper" style="margin-bottom: 20px;"></div>
+        <div class="search-container" style=" width: 65%; margin: auto;"></div>
+        <div class="box-container products-box " style="margin-top: 40px;"></div>
+    </section>
+
+    <!-- Overlay Section -->
+    <div id="overlay" style="display: none;"></div>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Ссылки</h4>
+                <ul class="links">
+
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="./login.html">Мой аккаунт</a></li>
+                    <li><a href="./products.html">Каталог</a></li>
+                    <li><a href="./gallary.html">Галерея</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="./faq.html" class="link"> FAQ</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Нужна помощь?</h4>
+                <ul class="links">
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +7-909-045-00-110</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +7-909-045-00-114</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Подписывайся на нас</h4>
+                <ul class="links">
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
+                            Whatsapp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Новости</h4>
+                <p>
+                    Подпишитесь на нашу рассылку, чтобы еженедельно
+                    получать новости, обновления, полезные советы и
+                    эксклюзивные предложения.
+                </p>
+                <form action="#">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+
+    </div>
+
+    <!-- Toaster -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+    <script src="script/topscrollindicator.js"></script>
+    <script src="script/cursor.js"></script>
+
+
+</body>
+
+</html>

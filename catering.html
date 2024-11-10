@@ -1,0 +1,274 @@
+<!-- @ -1,241 +0,0 @@ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АЙСИКО - БРОНИРОВАНИЕ</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+    <!-- Link to add favicon  -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/delivery-catering.css">
+
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- font awesome icons script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
+    </div>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+            <a href="./index.html">АЙСИКО</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link">О нас</a>
+            <a href="./products.html" class="link">Каталог</a>
+            <a href="./delivery.html" class="link">Доставка</a>
+            <a href="./dine-in.html" class="link">Адреса</a>
+            <a href="./catering.html" class="link active">Бронирование</a>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- форма для подачи заявки на кейтеринг -->
+<section>
+    <h1 style="margin-top: 100px; padding: 0 40px;">⠀Бронирование мероприятия⠀</h1>
+    <h2 class="heading">Расскажите нам о вашем мероприятии</h2>
+    <form class="form-contents">
+
+        <div class="indv-text">
+            <label for="name" class="text">ФИО</label>
+            <input type="text" class="form-text" placeholder="Введите ваше имя" required 
+                pattern="[а-яА-Яa-zA-Z ]+" 
+                oninvalid="this.setCustomValidity('Пожалуйста, введите ваше имя без цифр и спецсимволов.')"
+                oninput="this.setCustomValidity('')" />
+        </div>
+
+        <div class="indv-text">
+            <label for="email" class="text">Электронная почта</label>
+            <input type="email" class="form-text" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="indv-text">
+            <label for="contact" class="text">Контактный номер</label>
+            <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required
+                pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+        </div>
+
+        <div class="indv-text">
+            <label for="eventdate" class="text">Дата мероприятия</label>
+            <input type="date" class="form-text" name="" id="dateInput" required>
+        </div>
+
+        <div class="indv-text">
+            <label for="eventtype" class="text">Тип мероприятия</label>
+
+            <label for="self-pickup">
+                <input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup">
+                Самовывоз
+            </label><br><br>
+
+            <label for="self-delivery">
+                <input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery">
+                Самостоятельная доставка
+            </label><br><br>
+
+            <label for="full-service">
+                <input type="radio" id="full-service" name="indoor-outdoor" value="full-service">
+                В ресторане
+            </label><br><br>
+
+            <label for="not-sure">
+                <input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure">
+                Не уверен, хочу узнать больше
+            </label>
+        </div>
+
+        <div class="indv-text">
+            <label for="add1" class="text">Полный адрес</label>
+            <input type="text" class="form-text" name="" id="" placeholder="Улица, дом" required>
+        </div>
+
+        <div class="indv-text">
+            <label for="state" class="text">Регион</label>
+            <select class="form-text" id="state" required>
+                <option value="">Выберите регион</option>
+                <option value="Центральный">Центральный</option>
+                <option value="Северный">Северный</option>
+                <option value="Южный">Южный</option>
+                <option value="Западный">Западный</option>
+                <option value="Восточный">Восточный</option>
+                <option value="Северо-Западный">Северо-Западный</option>
+                <option value="Юго-Западный">Юго-Западный</option>
+                <option value="Дальневосточный">Дальневосточный</option>
+            </select>
+        </div>
+
+        <div style="display: flex; margin: 20px;" class="btn">
+            <button type="submit" value="SUMBIT" class="btn-style">Отправить</button>
+            <button type="reset" class="btn-style reset-btn" value="RESET">Очистить</button>
+        </div>
+
+    </form>
+</section>
+
+
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Ваша корзина</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <div class="empty-cart-img-div">
+                <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+            </div>
+            <p class="empty-cart-text">Ваша корзина пуста!</p>
+            <p class="empty-cart-info">Как рожок без мороженого!🍦 </p>
+            <p class="empty-cart-info">Наполните его нашими вкуснейшими добавками!</p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Ссылки</h4>
+                <ul class="links">
+
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="./login.html">Мой аккаунт</a></li>
+                    <li><a href="./products.html">Каталог</a></li>
+                    <li><a href="./gallary.html">Галерея</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="./faq.html" class="link"> FAQ</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Нужна помощь?</h4>
+                <ul class="links">
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +7-909-045-00-110</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +7-909-045-00-114</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Подписывайся на нас</h4>
+                <ul class="links">
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
+                            Whatsapp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Новости</h4>
+                <p>
+                    Подпишитесь на нашу рассылку, чтобы еженедельно
+                    получать новости, обновления, полезные советы и
+                    эксклюзивные предложения.
+                </p>
+                <form action="#">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+
+    <script src="./script/catering.js"></script>
+    <script src="./script/nav.js"></script>
+    <script src="./script/cart.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
+    <script type="module" src="./script/products.js"></script>
+    <script src="script/cursor.js"></script>
+
+</body>
+
+</html>
